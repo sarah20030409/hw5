@@ -1,0 +1,109 @@
+int Final = 0;
+String Name="2";
+int GB=92;
+int Years=2;
+int MON=2;
+int Day=2;
+String StuID="2";
+for (Final = 2; Final != 1;)
+{
+
+    if (Final == 2)
+    {
+        Console.Write("輸入姓名: ");
+        Name = Console.ReadLine();
+        Console.WriteLine(" ");
+
+        Console.WriteLine("性別: ");//
+        Console.WriteLine("1.女 /2.男 ?");
+        GB = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(" ");
+
+        Console.WriteLine("出生年月日?(範例:2000/01/01)");
+        Console.WriteLine(" ");
+        Console.Write("年(西元): ");
+        Years = Convert.ToInt32(Console.ReadLine());
+        Console.Write("月: ");
+        MON = Convert.ToInt32(Console.ReadLine());
+        Console.Write("日: ");
+        Day = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(" ");
+
+        Console.Write("學號: ");
+        StuID = Console.ReadLine();
+        Console.WriteLine(" ");
+
+    }
+
+    Console.WriteLine("姓名: " + Name);
+    if (GB == 1)
+    {
+        Console.WriteLine("性別 : 女");
+    }
+    else if (GB == 2)
+    {
+        Console.WriteLine("性別 : 男");
+    }
+    else
+    {
+        Console.WriteLine("姓別 :");
+    }
+    Console.WriteLine("出生年月日: " + Years + "/" + MON + "/" + Day);
+    Console.WriteLine("學號: " + StuID);
+    Console.WriteLine("確認請輸入'1',欲重新填寫請輸入'2' ");
+    Console.WriteLine("欲修改單一選項請輸入'3'");
+    Final = Convert.ToInt32(Console.ReadLine());
+
+    if (Final == 1)
+    {
+        int exitCode = 0;
+        Console.WriteLine("建置完成(按Enter)");
+        //結束執行
+    }
+    else if (Final == 2)
+    {
+
+    }
+    else if (Final == 3)
+    {
+        string a;
+        string b;
+        string c;
+        string d;
+        Console.WriteLine("請選擇欲修改之項目: ");
+        Console.WriteLine("a.姓名 /  b.性別 / c.出生年月日 / d.學號 ");
+        String ChangeInput = Console.ReadLine();
+
+        switch (ChangeInput)
+        {
+            case "a":
+                Console.Write("輸入姓名: ");
+                Name = Console.ReadLine();
+                break;
+            case "b":
+                Console.WriteLine("性別: ");//
+                Console.WriteLine("1.女 /2.男 ?");
+                GB = Convert.ToInt32(Console.ReadLine());
+                break;
+            case "c":
+                Console.WriteLine("出生年月日?(範例:2000/01/01)");
+                Console.WriteLine(" ");
+                Console.Write("年(西元): ");
+                Years = Convert.ToInt32(Console.ReadLine());
+                Console.Write("月: ");
+                MON = Convert.ToInt32(Console.ReadLine());
+                Console.Write("日: ");
+                Day = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(" ");
+                break;
+            case "d":
+                Console.Write("學號: ");
+                StuID = Console.ReadLine();
+                Console.WriteLine(" ");
+                break;
+
+        }
+
+    }
+    Console.ReadKey();
+}
